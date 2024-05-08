@@ -6,7 +6,7 @@ const userRouter: Router = Router();
 const adminRouter: Router = Router();
 const superAdminRouter: Router = Router();
 const specialistRouter: Router = Router();
-const turnsRouter: Router = Router();
+const appointmentsRouter: Router = Router();
 
 server.use(enrutador);
 
@@ -14,12 +14,12 @@ enrutador.use("/user", userRouter);
 enrutador.use("/admin", adminRouter);
 enrutador.use("/super_admin", superAdminRouter);
 enrutador.use("/specialist", specialistRouter);
-enrutador.use("/turns", turnsRouter);
+enrutador.use("/appointments", appointmentsRouter);
 
 export {
   userRouter,
   adminRouter,
   superAdminRouter,
   specialistRouter,
-  turnsRouter,
+  appointmentsRouter,
 };
