@@ -9,4 +9,4 @@ watercolor="ACUARELA",
 old_school="CLASICO",
 geometry="GEOMETRICO",
 }
-export default Ispecialist
+export  {Ispecialist, Style}

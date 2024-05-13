@@ -3,7 +3,7 @@ interface Icredential {
   username: string;
   password: string;
   img: string;
-  rol:Role;
+  role:Role;
 }
 
 enum Role{
@@ -12,4 +12,4 @@ admin="ADMINISTRADOR",
 superAdmin="SUPER_ADMIN",
 specialist="SPECIALIST",
 }
-export default Icredential
+export  {Icredential, Role}

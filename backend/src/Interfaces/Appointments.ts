@@ -12,4 +12,4 @@ enum Opciones {
   opcion2 = "SESION TATTOO",
   opcion3 = "PERFORACION",
 }
-export default Iappointment
+export  {Iappointment, Opciones}

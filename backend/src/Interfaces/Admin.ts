@@ -1,6 +1,6 @@
 import Iuser from "./User";
-import Ispecialist from "./Specialist";
-import Iappointment from "./Appointments";
+import {Ispecialist} from "./Specialist";
+import {Iappointment} from "./Appointments";
 
 interface Iadmin extends Iuser{
           users: Iuser[];
