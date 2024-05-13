@@ -1,9 +1,8 @@
-import express from "express"
-import server from "./server"
-import { PORT } from "./envs"
+import {server} from "./server"
+import { PORT } from "./Config/envs"
 
 
 server.listen(PORT, ()=>{
-          console.log(`Por running in port: ${PORT}`);
+          console.log(`Port running in port: ${PORT}`);
           
 })
