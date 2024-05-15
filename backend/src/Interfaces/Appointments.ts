@@ -1,15 +1,12 @@
 interface Iappointment {
   id: number;
-  date: Date;
-  time: number;
+  date: string;
+  time: string;
   user_Id: number; //referencia al usuario
   specialist_Id?: number; //referencia al especialista
-  is_Active: boolean; // puede ser “true” o “false”
-  description: Opciones;//referencia al enum de abajo
+  description: Opciones;//referencia al type de abajo
+  status:Status;
 }
-enum Opciones {
-  opcion1 = "CONSULTA",
-  opcion2 = "SESION TATTOO",
-  opcion3 = "PERFORACION",
-}
-export  {Iappointment, Opciones}
+type Opciones = "CONSULTA" | "SESION TATTOO" | "PERFORACION"
+type Status = "ACTIVE"|"CANCELLED"
+export  {Iappointment, Opciones, Status}

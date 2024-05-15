@@ -3,13 +3,9 @@ interface Icredential {
   username: string;
   password: string;
   img: string;
-  role:Role;
+  role: Role;
 }
 
-enum Role{
-user="USUARIO",
-admin="ADMINISTRADOR",
-superAdmin="SUPER_ADMIN",
-specialist="SPECIALIST",
-}
-export  {Icredential, Role}
+type Role = "USUARIO" | "ADMINISTRADOR" | "SUPER_ADMIN" | "SPECIALIST";
+
+export { Icredential, Role };

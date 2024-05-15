@@ -8,7 +8,7 @@ interface Dto_credential {
 
 /*Implementar una función que reciba username y password y cree un nuevo par de credenciales con estos datos. Debe retornar el ID del par de credenciales creado.*/
 
-export const credential_service = (data: Dto_credential) => {
+export const create_credential = (data: Dto_credential, role:Role):number => {
   // falta poner mas adelante el async await cuando llamemos a la BDD
   const { username, password } = data;
   const new_credential: Icredential = {
@@ -16,7 +16,7 @@ export const credential_service = (data: Dto_credential) => {
     username: data.password,
     password: data.password,
     img: data.password,
-    role: Role.user,
+    role: role,
   };
   return new_credential.id;
 };
@@ -27,12 +27,12 @@ let list_credential: Icredential[] = [
     username: "lucas",
     password: "1234",
     img: "fotito",
-    role: Role.user,
+    role: "USUARIO",
   },
 ];
 /*Implementar una función que recibirá username y password, y deberá chequear si el nombre de usuario existe entre los datos disponibles y, si es así, si el password es correcto. En caso de que la validación sea exitosa, deberá retornar el ID de las credenciales.*/
 
-export const credential_validation = (data: Icredential) => {
+export const credential_validation = (data: Icredential):number|null => {
   const { username, password } = data;
   const validation_username = list_credential.find(
     (credential) => username === credential.username
@@ -46,6 +46,7 @@ export const credential_validation = (data: Icredential) => {
     return validation_username.id;
   } else {
     console.log("Error, password incorrecto");
+    return null
   }
 
 };
