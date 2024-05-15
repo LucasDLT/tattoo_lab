@@ -1,25 +1,10 @@
 import { Iappointment, Opciones, Status } from "../Interfaces/Appointments";
 import Iuser from "../Interfaces/User";
+import { list_appointment } from "../Utils/Arrays";
+import { Dto_appointment } from "../Utils/Dtos";
 
 
-interface Dto_appointment {
-          date: string;
-          time: string;
-          user_Id: number; //referencia al usuario
-          specialist_Id?: number; //referencia al especialista
-}
 
-const list_appointment:Iappointment[]=[
-          {
-                    id:2,    
-                    date:"12/12/12",
-                    time:"12.12",
-                    user_Id:2,
-                    specialist_Id:2,
-                    description:"CONSULTA",
-                    status:"ACTIVE"
-          }
-]
 /*Implementar una función que pueda retornar el arreglo completo de turnos. */
 export const get_all_appointments = ():Array<Iappointment>=>{
 return list_appointment

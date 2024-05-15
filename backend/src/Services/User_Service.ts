@@ -1,34 +1,14 @@
 import { Role } from "../Interfaces/Credential";
 import Iuser from "../Interfaces/User";
+import { list_user } from "../Utils/Arrays";
+import { Dto_users } from "../Utils/Dtos";
 import { create_credential } from "./Credential_Service";
 
 /*En el servicio de usuarios:
 
 Implementar una función que pueda retornar el arreglo completo de usuarios.*/
-interface Dto_users {
-  name: string;
-  surname: string;
-  email: string;
-  phone: number;
-  birthdate: number;
-  nDni: number;
-  credentialsId: number; //referencia al par de credenciales que posee el usuario.
-  username:string;
-  password:string
-}
-const list_user: Iuser[] = [
-  {
-    id: 1,
-    name: "lucas",
-    surname: "dlt",
-    email: "lucas@mail.com",
-    phone: 11223344,
-    birthdate: 12 / 1 / 1090,
-    nDni: 12123123,
-    credentialsId: 1,
-    
-  },
-];
+
+
 
 export const get_all_users = (): Array<Iuser> => {
   return list_user;
