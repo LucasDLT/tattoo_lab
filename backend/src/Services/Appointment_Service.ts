@@ -55,7 +55,19 @@ return new_appointment
 }
 /*Implementar una función que reciba el id de un turno específico y una vez identificado el turno correspondiente, cambiar su estado a “cancelled”. */
 
-export const modify_appointment = (id_appointment:Iappointment):Iappointment=>{
+export const modify_appointment = (id_appointment:Iappointment):Iappointment|null|undefined=>{
 const {id} = id_appointment
-
+const found_appointment:Iappointment|undefined = list_appointment.find((app)=>app.id === id)
+if (!found_appointment) {// si no lo encontramos
+          console.error("Error.No se encontro el turno");
+          return null
+} 
+if (found_appointment.status === "CANCELLED") {//si ya esta cancelado
+          console.warn("El turno ya se encuntra en estado CANCELLED")
+          return found_appointment
+}
+if (found_appointment.status === "ACTIVE") {//si lo encontramos y tiene status activo
+          found_appointment.status = "CANCELLED"
+          return found_appointment
+}
 }
