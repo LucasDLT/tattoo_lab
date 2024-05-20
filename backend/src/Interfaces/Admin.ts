@@ -7,4 +7,5 @@ interface Iadmin extends Iuser{
           specialists: Ispecialist[];
           appointments: Iappointment[];
 }
+
 export default Iadmin

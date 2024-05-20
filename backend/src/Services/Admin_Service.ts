@@ -1,0 +1,1 @@
+/*hacer funciones para que el administrador pueda: 1_ recibir el id y ver la lista de usuarios y especialistas, 2_ver la lista de turnos para el dia, la semana y el mes*/

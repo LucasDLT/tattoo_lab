@@ -4,7 +4,7 @@ interface Iuser {
   surname: string;
   email: string;
   phone:number;
-  birthdate: number;
+  birthdate: string;
   nDni: number;
   credentialsId: number; //referencia al par de credenciales que posee el usuario.
 }

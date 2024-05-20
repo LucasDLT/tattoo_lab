@@ -1,3 +1,4 @@
+import Iadmin from "../Interfaces/Admin";
 import { Iappointment } from "../Interfaces/Appointments";
 import { Icredential } from "../Interfaces/Credential";
 import Iuser from "../Interfaces/User";
@@ -20,7 +21,7 @@ const list_user: Iuser[] = [
     surname: "dlt",
     email: "lucas@mail.com",
     phone: 11223344,
-    birthdate: 12 / 1 / 1090,
+    birthdate: "12 / 1 / 1090",
     nDni: 12123123,
     credentialsId: 1,
   },
@@ -35,4 +36,19 @@ let list_credential: Icredential[] = [
     role: "USUARIO",
   },
 ];
-export {list_appointment, list_credential, list_user}
+const list_admin:Iadmin[]=[
+  {
+            users: [],
+            specialists: [],
+            appointments: [],
+            id: 1,
+            name: "mateo",
+            surname: "dlt",
+            email: "mateito@gmail.com",
+            phone: 11223344,
+            birthdate: "12-12-12",
+            nDni: 0,
+            credentialsId: 0
+  }
+]
+export {list_appointment, list_credential, list_user, list_admin}
